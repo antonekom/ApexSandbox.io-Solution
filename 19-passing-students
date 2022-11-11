@@ -5,4 +5,10 @@ public Boolean isPassed(Boolean passedExam, Boolean passedAssignments, Boolean p
     if (passedProject) numPassed++;
     if(numPassed >=2) return true;
     else return false;
+
+    /*  more concise, better solution
+    return (passedExam && passedAssignments)
+        || (passedExam && passedProject)
+        || (passedAssignments && passedProject); 
+    */
 }
