@@ -1,0 +1,12 @@
+public String changeTimeFormat(String strTime) {
+    String template = '{0}:{1} {2}';
+    String ampm = 'AM';
+    if(strTime.split(':')[0] > 12) {
+        hours = strTime.split(':')[0] - 12;
+        ampm= 'PM';
+    }
+    String minutes = strTime.split(':')[1];
+    List<Object> parameters = new List<Object> { hours, minutes, ampm};
+    String formattedTime = String.format(template, parameters);
+    return formattedTime;
+}
