@@ -1,20 +1,19 @@
 public String changeTimeFormat(String strTime) {
     String template = '{0}:{1} {2}';
     String ampm = 'AM';
-    String hours = Integer.valueOf(strTime.split(':')[0]);
+    String hours = strTime.split(':')[0];
     System.debug(hours);
-    if(hours == 12) {
-        hours = String.valueOf(hours);
-        ampm= 'PM';
-    }
-    if(hours > 12) {
+    
+    if(Integer.valueOf(hours) > 12) {
         hours = String.valueOf(Integer.valueOf(strTime.split(':')[0]) - 12);
         ampm= 'PM';
     }
-    if(hours == 24) {
+    if(Integer.valueOf(hours) == 12) {
+        ampm= 'PM';
+    }
+    if(Integer.valueOf(hours) == 24) {
         ampm= 'AM';
     }
-    else hours = strTime.split(':')[0];
     
     System.debug(hours);
 
