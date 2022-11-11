@@ -1,4 +1,3 @@
 public Boolean isEndWithZero(Integer num){
-     if(isEndWithZero(String.valueOf(num))) return true;
-     else return false;
+     return String.valueOf(num).endsWith('0');
 }
