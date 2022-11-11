@@ -4,4 +4,15 @@ public String ageGroup(Integer n) {
     if(n >= 15 && n <= 21) return 'Youth';
     if(n >= 22) return 'Adult';
     else return '';
+
+    /* 
+    // better:
+    if (n <= 1) return 'Infant';
+    if (n <= 14) return 'Child';
+    if (n <= 21) return 'Youth';
+    return 'Adult';
+
+    // even better:
+    return n <= 1 ? 'Infant' : n <= 14 ? 'Child' : n <= 21 ? 'Youth' : 'Adult';
+    */
 }
