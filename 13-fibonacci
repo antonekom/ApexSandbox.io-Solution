@@ -17,4 +17,5 @@ public Integer fibonacci(Integer n) {
     }
 
     System.debug(fibSequence);
+    return(fibSequence[n]);
 }
