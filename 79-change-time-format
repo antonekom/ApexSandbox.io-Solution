@@ -11,8 +11,8 @@ public String changeTimeFormat(String strTime) {
     if(Integer.valueOf(hours) == 12) {
         ampm= 'PM';
     }
-    if(Integer.valueOf(hours) == 24) {
-        ampm= 'AM';
+    if(Integer.valueOf(hours) == 0) {
+        hours= '12';
     }
     
     System.debug(hours);
