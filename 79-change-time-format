@@ -2,7 +2,6 @@ public String changeTimeFormat(String strTime) {
     String template = '{0}:{1} {2}';
     String ampm = 'AM';
     String hours = strTime.split(':')[0];
-    System.debug(hours);
     
     if(Integer.valueOf(hours) > 12) {
         hours = String.valueOf(Integer.valueOf(strTime.split(':')[0]) - 12).leftPad(2,'0');
@@ -15,14 +14,10 @@ public String changeTimeFormat(String strTime) {
         hours= '12';
     }
     
-    System.debug(hours);
-
     String minutes = strTime.split(':')[1];
-    System.debug(minutes);
-    System.debug(ampm);
     
     List<Object> parameters = new List<Object> { hours, minutes, ampm};
     String formattedTime = String.format(template, parameters);
-    System.debug(formattedTime);
+    
     return formattedTime;
 }
