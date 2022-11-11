@@ -1,9 +1,9 @@
 public Boolean companionPlants(String plant1, String plant2) {
-    Boolean result = false;
+    
     Map<String, List<String>> companionMap = new Map<String, List<String>>{
         'onions' => new List<String> {'lettuce', 'carrots', 'tomatoes'},
         'lettuce' => new List<String> {'cucumbers'}
     };
-    result = 
-    return (companionMap.get(plant1) == null ? (companionMap.get(plant2) == null ? null : companionMap.get(plant2).contains(plant1)) : companionMap.get(plant1).contains(plant2) );
+    Boolean result = (companionMap.get(plant1) == null ? (companionMap.get(plant2) == null ? null : companionMap.get(plant2).contains(plant1)) : companionMap.get(plant1).contains(plant2) );
+    return result == null ? false : Boolean result = (companionMap.get(plant1) == null ? (companionMap.get(plant2) == null ? null : companionMap.get(plant2).contains(plant1)) : companionMap.get(plant1).contains(plant2) );  ;
 }
