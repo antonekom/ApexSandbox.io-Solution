@@ -5,7 +5,7 @@ public String changeTimeFormat(String strTime) {
     System.debug(hours);
     
     if(Integer.valueOf(hours) > 12) {
-        hours = String.valueOf(Integer.valueOf(strTime.split(':')[0]) - 12);
+        hours = String.valueOf(Integer.valueOf(strTime.split(':')[0]) - 12).leftPad(2,'0');
         ampm= 'PM';
     }
     if(Integer.valueOf(hours) == 12) {
