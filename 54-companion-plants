@@ -3,5 +3,6 @@ public Boolean companionPlants(String plant1, String plant2) {
         'onions' => new List<String> {'lettuce', 'carrots', 'tomatoes'},
         'lettuce' => new List<String> {'cucumbers', 'onions'}
     };
-    return (companionMap.get(plant1).contains(plant2) || companionMap.get(plant2).contains(plant1));
+
+    return (companionMap.get(plant1) == null ? (companionMap.get(plant2) == null ? null : companionMap.get(plant2).contains(plant1)) : companionMap.get(plant1).contains(plant2) );
 }
