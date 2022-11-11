@@ -1,0 +1,5 @@
+public String nameFromEmail(String email) {
+    List<String> parts = email.split('.');
+    String firstName = parts[0];
+    String lastName = parts[1].split('@')[0];
+}
