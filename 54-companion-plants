@@ -1,7 +1,6 @@
 public Boolean companionPlants(String plant1, String plant2) {
-    Map<String, List<String>> companionMap = new Map<String, List<String>>{
-        'onions' => new list<String> { 'lettuce', 'carrots', 'tomatoes' },
-        'lettuce' => new list<String> { 'cucumbers', 'onions'}
-    };
+    Map<String, List<String>> companionMap = new Map<String, List<String>>();
+    companionMap.put('onions', new List<String>{'lettuce', 'carrots', 'tomatoes'});
+    companionMap.put('lettuce', new List<String>{'cucumbers', 'onions'});
     return (companionMap.get(plant1).contains(plant2) || companionMap.get(plant2).contains(plant1);
 }
