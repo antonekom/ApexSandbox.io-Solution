@@ -5,6 +5,8 @@ public String changeTimeFormat(String strTime) {
         hours = strTime.split(':')[0] - 12;
         ampm= 'PM';
     }
+    else hours = strTime.split(':')[0];
+    
     String minutes = strTime.split(':')[1];
     List<Object> parameters = new List<Object> { hours, minutes, ampm};
     String formattedTime = String.format(template, parameters);
